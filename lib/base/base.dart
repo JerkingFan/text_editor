@@ -59,9 +59,33 @@ class MyApp extends StatelessWidget {
                         ],
                       ),
                     ),
+                  
+                  child: const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Введите ваше сообщение",
+                            hintStyle: TextStyle(color: Colors.white), // Устанавливаем белый цвет текста
+                            enabledBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.transparent), // Убираем нижнюю полосу
+                            ),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.transparent), // Убираем нижнюю полосу при фокусе
+                            ),
+                          ),
+                          keyboardType: TextInputType.multiline,
+                          style: TextStyle(color: Colors.white),
+                          maxLines: null,
+                          scrollPadding: EdgeInsets.all(20.0),
+                          autofocus: true,
+                        )
+
+                  )
+                        )
+
+
                   ),
                 ),
-              ),
             ],
           ),
         ),
